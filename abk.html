@@ -1,0 +1,183 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>I Love U Calculator ❤️</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #ffd1dc, #ff9eb5);
+    font-family: Arial, sans-serif;
+}
+
+.calculator {
+    width: 320px;
+    padding: 22px;
+    border-radius: 28px;
+    background: #fff5f7;
+    box-shadow: 0 15px 35px #c94f7040;
+    border: 2px solid white;
+}
+
+h2 {
+    text-align: center;
+    color: #ff4f81;
+    margin-top: 0;
+}
+
+#display {
+    width: 100%;
+    height: 75px;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    background: #ffe1e9;
+    color: #d6336c;
+    font-size: 16px;
+    text-align: right;
+    padding: 15px;
+    margin-bottom: 18px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    height: 55px;
+    border: none;
+    border-radius: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    background: white;
+    color: #d6336c;
+    box-shadow: 0 3px 7px #ffb6c150;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #ffc2d1;
+    transform: scale(1.05);
+}
+
+.operator {
+    background: #ffb3c7;
+}
+
+.equal {
+    background: #ff4f81;
+    color: white;
+}
+
+.clear {
+    background: #ff779d;
+    color: white;
+}
+
+.love {
+    grid-column: span 4;
+    background: #ff4f81;
+    color: white;
+    font-size: 18px;
+}
+
+.footer {
+    text-align: center;
+    color: #ff4f81;
+    margin: 18px 0 0;
+    font-size: 13px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="calculator">
+    <h2>Chik kaly twt Calculator</h2>
+
+    <input id="display" value="" placeholder="0" readonly>
+
+    <div class="buttons">
+        <button class="clear" onclick="clearDisplay()">AC</button>
+        <button onclick="del()">DEL</button>
+        <button class="operator" onclick="add('%')">%</button>
+        <button class="operator" onclick="add('/')">÷</button>
+
+        <button onclick="add('7')">7</button>
+        <button onclick="add('8')">8</button>
+        <button onclick="add('9')">9</button>
+        <button class="operator" onclick="add('*')">×</button>
+
+        <button onclick="add('4')">4</button>
+        <button onclick="add('5')">5</button>
+        <button onclick="add('6')">6</button>
+        <button class="operator" onclick="add('-')">−</button>
+
+        <button onclick="add('1')">1</button>
+        <button onclick="add('2')">2</button>
+        <button onclick="add('3')">3</button>
+        <button class="operator" onclick="add('+')">+</button>
+
+        <button onclick="add('0')">0</button>
+        <button onclick="add('.')">.</button>
+        <button class="equal" onclick="calculate()">=</button>
+        <button onclick="add('(')">(</button>
+
+      
+    </div>
+
+    <p class="footer">Made with 💗 just for you</p>
+</div>
+
+<script>
+const display = document.getElementById("display");
+
+function add(value) {
+    if (display.value === "I LOVE U ❤️" ||
+        display.value === "Error") {
+        display.value = "";
+    }
+    display.value += value;
+}
+
+function clearDisplay() {
+    display.value = "";
+}
+
+function del() {
+    if (display.value === "I LOVE U ❤️" ||
+        display.value === "Error") {
+        display.value = "";
+    } else {
+        display.value = display.value.slice(0, -1);
+    }
+}
+
+function calculate() {
+    const expression = display.value;
+    display.value = "Yn chik dl chik khaly OuuMwh ❤️";
+    
+    
+}
+
+function showLove() {
+    display.value = "I LOVE U ❤️";
+}
+</script>
+
+</body>
+</html>
